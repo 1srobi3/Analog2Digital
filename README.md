@@ -1,2 +1,2 @@
 # Analog2Digital
-A2D conv
+Working in the ATmega32 microcontroller: the digital I / O pins in the PORT have the alternative function of analog inputs. Thus, there are 8 analog input channels that can be used sequentially via a multiplexer. The channel selection signals are set from the ADMUX register. The reference value is selected from the same register and its most common choice is the value of the AVCC pin (5V). The AVCC pin is connected to the supply voltage of the microcontroller through a low-pass filter which leads to voltage stabilization. The channels used in the applications below are ADC7 for the LM35 and ADC5 temperature sensor, and ADC6 for the potentiometer integrated on the EasyAVR v7 board.
