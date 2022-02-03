@@ -23,10 +23,10 @@ void ADC_Completed() iv IVT_ADDR_ADC{
 }
 
 void Init_adc(){
-     ADMUX = 0b01000000; //Referin.a - AVCC
-     ADCSRA = 0b10000111; //Activare ADC; Prescaler = 128;
-     ADCSRA |= (1<<3); //Activare întrerupere ADIE
-     SREG |= (1<<7); //Global Interrupt Enable
+     ADMUX = 0b01000000;
+     ADCSRA = 0b10000111; 
+     ADCSRA |= (1<<3); 
+     SREG |= (1<<7); 
 }
 
 int readADC(char ch) {
@@ -40,9 +40,9 @@ int readADC(char ch) {
 }
 
 void readADC_interrupt(char ch){
-     ADMUX &= 0b11100000; //Reseteazã canalul de conversie
-     ADMUX |= ch; //Seteazã canalul conversiei
-     ADCSRA |= (1<<6); //Începe conversia
+     ADMUX &= 0b11100000; 
+     ADMUX |= ch; 
+     ADCSRA |= (1<<6); 
 }
 
 void display(int a, int b) {
