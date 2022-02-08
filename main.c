@@ -122,5 +122,5 @@ void main() {
      DDRC = 0b11111111;
      init_timer();
      Init_adc();
-                  for(;;);
+     while(1);
 }
